@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div id="antiheroic_banner" class="card border">
+</div>
+
+<div id="antiheroic_content">
+    {{content}}
+</div>
+
+<div id="cards" class="row">
+</div>
+
+
+{% raw %}
+<script id="banner-template" type="text/x-handlebars-template">
+    <div class="row nowrap">
+      <div class="col">
+        <h1 class=>{{title}}</h1>
+        <div>{{short_description}}</div>
+      </div>
+    </div>
+</script>
+
+<script id="card-template" type="text/x-handlebars-template">
+    <div class="col s4">
+        <div class="card no-padding border">
+            <img src="/beer-and-woman.jpg" class="responsive small">
+            <div class="padding">
+              <h5 class="no-margin">{{title}}</h5>
+              <div>{{description}}</div>
+            </div>
+          </div>
+    </div>
+</script>
+{% endraw %}
+
+<script src="{{ "assets/js/layout/antiheroic.js" | prepend: site.baseurl }}" async></script>

@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+    <h3 class="center-align card">{{page.title}}</h3>
+    </header>
+        <div class="row">
+            <div class="col s12 m12 l3">
+                <i>event</i>
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: date_format }}
+                  </time>
+            </div>
+            <div class="col s12 m4 l3">
+                <i>list</i>
+                {% for category in page.categories %}
+                    {{category}}
+                {% endfor %}
+            </div>
+            <div class="col s12 m8 l6">
+                <i>tag</i>
+                {% for tag in page.tags %}
+                    <span class="chip">{{tag}}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="small-divider"></div>
+
+        <div itemprop="articleBody">
+            {{ content }}
+        </div>
+
+</article>
+{% include share_post.html %}
+<script src="{{ "assets/js/layout/post.js" | prepend: site.baseurl }}" async></script>

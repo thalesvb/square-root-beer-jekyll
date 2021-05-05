@@ -1,0 +1,45 @@
+---
+---
+
+html, body {
+    
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer.card {
+    display: flex;
+    justify-content: center;
+    padding: 0px 88px;
+}
+footer.card > div {
+    max-width: 992px;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.social-media-list {
+    display: table;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.social-media-list li {
+    float: left;
+    margin: 5px 10px 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    footer.card {
+        padding: 0px 8px 56px 8px;
+        
+    }
+}
+
+@import 'beer_overwrites';
+@import 'antiheroic';
+@import 'post';

@@ -1,0 +1,31 @@
+<footer class="card">
+<div>
+<div class="row">
+    <div class="col s6">
+        <p class="link">
+        <a href="{{ 'feed.xml' | relative_url }}">
+        <i>rss_feed</i>Subscribe
+        </a>
+        </p>
+        {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
+    </div>
+    <div class="col s6">
+        <p>{{ site.description | escape }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 social-links">
+        {% include social.html %}
+    </div>
+</div>
+</div>
+</footer>

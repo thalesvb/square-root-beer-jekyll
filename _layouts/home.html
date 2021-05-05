@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{{ content }}
+{%- assign date_format = site.root_beer.date_format | default: "%b %-d, %Y" -%}
+<h2 class="center-align">Latest posts</h2>
+<div class="row">
+{% for post in site.posts %}
+<div class="col s12">
+  <div class="card no-padding">
+    <div class="row no-wrap no-space">
+      <div class="col">
+        <img src="{{ post.image | prepend: site.baseurl }}" class="responsive">
+      </div>
+      <div class="col">
+        <div class="padding">
+          <h5>{{ post.title }}</h5>
+          <div>{{ post.date | date: date_format }}</div>
+          <div>{{ post.excerpt }}</div>
+          <nav>
+            <a href="{{ post.url }}"><button class="border">Link</button></a>
+            <div class="categories">
+              {% for category in post.categories %}
+              <a class="chip" href="{{category | slugify }}">{{category}}</a>
+              {% endfor  %}
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+<script>works_done();</script>

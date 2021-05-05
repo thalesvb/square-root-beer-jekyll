@@ -1,0 +1,9 @@
+/* Patch FA icons into Beer */
+.circle>i, .fab {
+    vertical-align: inherit;
+}
+
+/* Disable overflow-x from container class, to allow sticky positions.*/
+.container {
+    overflow-x: unset;
+}

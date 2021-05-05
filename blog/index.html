@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+---
+
+{% for post in paginator.posts %}
+  <h3><a href="{{ post.url }}" class="link">{{ post.title }}</a></h3>
+  <p class="author">
+    <span class="date">{{ post.date | date_to_long_string }}</span>
+  </p>
+  <div class="content">
+    {{ post.excerpt }}
+  </div>
+{% endfor %}
+
+
+<div class="large-divider"></div>
+<nav class="center-align">
+    <ul class="paginator">
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <li><a class="button" href="#">{{page}}<span class="sr-only">Current page</span></a></li>
+      {% elsif page == 1 %}
+        <li><a class="button border" href="{{ site.root_beer.blog_listing_root | relative_url }}">{{ page }}</a></li>
+      {% else %}
+        <li><a class="button border" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{page}}</a></li>
+      {% endif %}
+    {% endfor %}
+</ul>
+</nav>
+<script>works_done();</script>

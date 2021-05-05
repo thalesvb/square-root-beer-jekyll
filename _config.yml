@@ -1,0 +1,47 @@
+title: Your awesome title
+author:
+  name: GitHub User
+  email: user@github.com
+
+description: > # this means to ignore newlines until "show_excerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+baseurl: "/"    # the subpath of your site, "/blog"
+
+plugins:
+  - jekyll-paginate
+
+paginate: 2
+paginate_path: "/blog/page/:num"
+
+collections:
+  projects:
+    label_pretty: Projects
+    icon: assignment
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      type: "projects"
+    values:
+      layout: "antiheroic"
+
+root_beer:
+  blog_listing_root: /blog/
+  # Date format: refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+  date_format: "%b %-d, %Y"
+  # generate social links in footer
+  social_links:
+    twitter: jekyllrb
+    github:  jekyll
+    gitlab: jekyll
+    devto: jekyll
+    facebook: jekyll
+    instagram: jekyll
+    linkedin: jekyll
+    telegram: jekyll
+
+    

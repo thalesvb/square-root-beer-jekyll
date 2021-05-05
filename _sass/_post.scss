@@ -1,0 +1,27 @@
+.post-header {
+    position: sticky;
+    top: 56px;
+    z-index: 1;
+}
+.post-header-sticky {
+    width: 100vw;
+}
+.share-post i {
+    width: 1em;
+    text-align:center;
+}
+.paginator {
+    display: table;
+    margin: 0 auto;
+    list-style: none;
+}
+.paginator li {
+    float: left;
+    margin: 5px 10px 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-header {
+        top: 0px;
+    }
+}

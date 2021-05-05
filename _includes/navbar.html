@@ -1,0 +1,38 @@
+<div id="menu-id" class="menu medium-device large-device top">
+    <a href="/">
+        <i>home</i>
+        <div>Home</div>
+    </a>
+    <a href="/blog">
+        <i>feed</i>
+        <div>Blog</div>
+    </a>
+    {% for collection in site.collections %}
+        {% if collection.label == "posts" %}
+            {% continue %}
+        {% endif %}
+    <a href="/{{collection.label}}">
+        <i>{{collection.icon}}</i>
+        <div>{{collection.label_pretty}}</div>
+    </a>
+    {% endfor %}
+</div>
+<div id="menu-bottom" class="menu bottom small-device">
+    <a href="/">
+        <i>home</i>
+        <div>Home</div>
+    </a>
+    <a href="/blog">
+        <i>feed</i>
+        <div>Blog</div>
+    </a>
+    {% for collection in site.collections %}
+        {% if collection.label == "posts" %}
+            {% continue %}
+        {% endif %}
+    <a href="/{{collection.label}}">
+        <i>{{collection.icon}}</i>
+        <div>{{collection.label_pretty}}</div>
+    </a>
+    {% endfor %}
+</div>
