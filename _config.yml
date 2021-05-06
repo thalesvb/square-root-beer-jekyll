@@ -33,6 +33,7 @@ root_beer:
   blog_listing_root: /blog/
   # Date format: refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%b %-d, %Y"
+  latest_posts_limit: 5
   # generate social links in footer
   social_links:
     twitter: jekyllrb
