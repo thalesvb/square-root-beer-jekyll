@@ -7,3 +7,8 @@
 .container {
     overflow-x: unset;
 }
+
+/* Keep Gist layout */
+.gist table td {
+    height: initial;
+}
