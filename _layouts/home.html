@@ -21,9 +21,9 @@ layout: default
           <div>{{ post.excerpt }}</div>
           <nav>
             <a href="{{ post.url }}"><button class="border">Link</button></a>
-            <div class="categories">
+            <div class="post-categories">
               {% for category in post.categories %}
-              <a class="chip" href="{{category | slugify }}">{{category}}</a>
+              <div class="chip">{{category}}</div>
               {% endfor  %}
             </div>
           </nav>

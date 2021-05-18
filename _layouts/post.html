@@ -12,13 +12,13 @@ layout: default
                     {{ page.date | date: date_format }}
                   </time>
             </div>
-            <div class="col s12 m4 l3">
+            <div class="col s12 m4 l3 post-categories">
                 <i>list</i>
                 {% for category in page.categories %}
                     {{category}}
                 {% endfor %}
             </div>
-            <div class="col s12 m8 l6">
+            <div class="col s12 m8 l6 post-tags">
                 <i>tag</i>
                 {% for tag in page.tags %}
                     <span class="chip">{{tag}}</span>
