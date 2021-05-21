@@ -2,14 +2,29 @@
 layout: default
 ---
 
-<div id="antiheroic_banner" class="card border">
-</div>
+<div id="antiheroic_container">
 
-<div id="antiheroic_content">
-    {{content}}
-</div>
+  <div id="antiheroic_banner" class="card border">
+  </div>
 
-<div id="cards" class="row">
+  <div id="antiheroic_content">
+      {{content}}
+  </div>
+
+  <div id="antiheroic_cards" class="row">
+    {% for feature in page.features %}
+    <div class="col s4">
+      <div class="card no-padding border">
+          {% if feature.image %}<img src="{{feature.image}}" class="responsive small">{% endif %}
+          <div class="padding">
+            <h5 class="no-margin">{{feature.title}}</h5>
+            <div>{{feature.description}}</div>
+          </div>
+        </div>
+  </div>
+    {% endfor %}
+  </div>
+
 </div>
 
 
@@ -20,18 +35,6 @@ layout: default
         <h1 class=>{{title}}</h1>
         <div>{{short_description}}</div>
       </div>
-    </div>
-</script>
-
-<script id="card-template" type="text/x-handlebars-template">
-    <div class="col s4">
-        <div class="card no-padding border">
-            <img src="/beer-and-woman.jpg" class="responsive small">
-            <div class="padding">
-              <h5 class="no-margin">{{title}}</h5>
-              <div>{{description}}</div>
-            </div>
-          </div>
     </div>
 </script>
 {% endraw %}

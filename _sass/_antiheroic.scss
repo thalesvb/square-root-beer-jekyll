@@ -1,3 +1,20 @@
 #antiheroic_banner {
     padding: 4rem 2rem;
 }
+
+#antiheroic_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#antiheroic_banner {
+    order: 1;
+}
+
+#antiheroic_cards {
+    order: 2;
+}
+
+#antiheroic_content {
+    order: 3;
+}
