@@ -15,7 +15,7 @@ layout: default
     {% for feature in page.features %}
     <div class="col s4">
       <div class="card no-padding border">
-          {% if feature.image %}<img src="{{feature.image}}" class="responsive small">{% endif %}
+          {% if feature.image %}<img src="{{feature.image | prepend: site.cdn_url}}" class="responsive small">{% endif %}
           <div class="padding">
             <h5 class="no-margin">{{feature.title}}</h5>
             <div>{{feature.description}}</div>
