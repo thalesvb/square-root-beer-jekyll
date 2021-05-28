@@ -6,19 +6,19 @@
         </div>
         <div class="col">
             <a class="button" aria-label="Share on LinkedIn"
-                    href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                    href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}"
                     onclick="window.open(this.href, 'linkedin-share', 'width=550,height=235');return false;">
                 <i class="fab fa-linkedin-in"></i>
                 <div class="tooltip">Share on Linkedin</div>
             </a>
             <a class="button" aria-label="Share on Twitter"
-                    href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url }}{{ site.baseurl }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+                    href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ page.url | absolute_url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fab fa-twitter"></i>
                 <div class="tooltip">Share on Twitter</div>
             </a>
             <a class="button" aria-label="Share on Facebook"
-                    href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                    href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fab fa-facebook-f"></i>
                 <div class="tooltip">Share on Facebook</div>
