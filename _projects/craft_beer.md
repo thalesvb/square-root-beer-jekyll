@@ -4,18 +4,18 @@ description: A short description.
 features:
   - title: First Feature
     description: Description around this feature
-    image: dummy.png
+    image: //via.placeholder.com/1000x600.png
   - title: There I failed it
     description: Show no more
 ---
 
-# First H1, antiheroic banner
-Text inside first H1 will be shown on banner.
+# First H1 section, The Antiheroic Banner
+The first paragraph of first H1 section is shown on banner, so take it easy.
 
 Second paragraph starts right after cards.
 This allow to fill more text without starting a new section.
 
-Paragraphs too.
+It's not limited to two, you can free your inner writer.
 
 ## First H2 Section
 
