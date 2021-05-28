@@ -1,36 +1,53 @@
 ---
 layout: default
 ---
+{%- assign date_format = site.root_beer.date_format | default: "%b %-d, %Y" -%}
 <article itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-    <h3 class="center-align card">{{page.title}}</h3>
-    </header>
-        <div class="row">
+    <div class="post-header-container">
+        <header class="post-header">
+        <h3 class="center-align card border">{{page.title}}</h3>
+        </header>
+        <figure class="post-cover">
+            {% if page.cover %}<img src="{{ page.cover | relative_url }}"> {% endif %}
+        </figure>
+        
+    </div>
+
+        <div class="post-body card" itemprop="articleBody">
+            {{ content }}
+        </div>
+
+        <div class="small-divider"></div>
+
+        <div class="row post-info">
             <div class="col s12 m12 l3">
                 <i>event</i>
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                     {{ page.date | date: date_format }}
                   </time>
             </div>
+
+            {% if page.categories.size > 0 %}
             <div class="col s12 m4 l3 post-categories">
                 <i>list</i>
                 {% for category in page.categories %}
                     {{category}}
                 {% endfor %}
             </div>
+            {% endif %}
+
+            {% if page.tags.size > 0 %}
             <div class="col s12 m8 l6 post-tags">
                 <i>tag</i>
                 {% for tag in page.tags %}
                     <span class="chip">{{tag}}</span>
                 {% endfor %}
             </div>
-        </div>
-        <div class="small-divider"></div>
-
-        <div itemprop="articleBody">
-            {{ content }}
+            {% endif %}
         </div>
 
 </article>
+
 {% include share_post.html %}
+
 <script src="{{ "assets/js/layout/post.js" | prepend: site.baseurl }}" async></script>

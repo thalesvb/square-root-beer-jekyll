@@ -4,14 +4,39 @@
 .post-tags {
     user-select: none;
 }
+.post-header-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
 .post-header {
-    position: sticky;
-    top: 56px;
+    margin: 15vw auto;
     z-index: 1;
+    //position: absolute;
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 2;
 }
-.post-header-sticky {
-    width: 100vw;
+
+.post-header .card {
+    background-color: var(--color-4a);
 }
+
+.post-cover {
+    margin: 0 -4vw -100px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+figure.post-cover {
+    min-height: 400px;
+    max-height: 600px;
+}
+
+.post-cover img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
 .share-post i {
     width: 1em;
     text-align:center;

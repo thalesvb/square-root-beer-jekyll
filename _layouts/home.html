@@ -12,11 +12,11 @@ layout: default
   <div class="card no-padding">
     <div class="row no-wrap no-space">
       <div class="col">
-        <img src="{{ post.image | prepend: site.baseurl }}" class="responsive">
+        {% if post.cover %}<img src="{{ post.cover | relative_url }}" class="responsive"> {% endif %}
       </div>
       <div class="col">
         <div class="padding">
-          <h5>{{ post.title }}</h5>
+          <h5>{{ post.title | truncatewords: 25 }}</h5>
           <div>{{ post.date | date: date_format }}</div>
           <div>{{ post.excerpt }}</div>
           <nav>
