@@ -26,6 +26,10 @@ collections:
 
 defaults:
   - scope:
+      type: "posts"
+    values:
+      is_post: true # Simple workaround to highlight blog button on post pages.
+  - scope:
       type: "projects"
     values:
       layout: "antiheroic"
