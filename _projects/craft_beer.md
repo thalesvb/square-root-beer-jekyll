@@ -17,6 +17,8 @@ This allow to fill more text without starting a new section.
 
 It's not limited to two, you can free your inner writer.
 
+This paragraph contains a [dummy link](#) for testing purposes.
+
 ## First H2 Section
 
 Lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut.

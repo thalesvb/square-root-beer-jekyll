@@ -5,8 +5,14 @@ function rewriteAntiHeroic() {
     let firstLevels = content.getElementsByTagName("H1");
     bannerHeader = firstLevels[0];
     buildBanner(bannerHeader);
-
+    applyCommonStyles();
     works_done();
+}
+
+function applyCommonStyles() {
+    document.getElementById("antiheroic_container").querySelectorAll("a").forEach(anchor => {
+        anchor.classList.add("link");
+    });
 }
 
 function buildBanner(nodeStart) {
