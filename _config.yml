@@ -39,6 +39,11 @@ root_beer:
   # Date format: refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%b %-d, %Y"
   latest_posts_limit: 5
+  
+  ### Analytics data
+  #analytics:
+  #  google: UA-...
+  
   # generate social links in footer
   social_links:
     twitter: jekyllrb

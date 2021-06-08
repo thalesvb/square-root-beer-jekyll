@@ -18,16 +18,17 @@
     </head>
     <body>
         {%- assign date_format = site.root_beer.date_format | default: "%b %-d, %Y" -%}
-            <div class="container">
-            {% include navbar.html %}
+        {% include analytics.html %}
+        <div class="container">
+        {% include navbar.html %}
 
-                <div id="main" class="content page top">
+            <div id="main" class="content page top">
 
-                {{ content }}
+            {{ content }}
 
-                </div>
-                
             </div>
-            {% include footer.html %}
+            
+        </div>
+        {% include footer.html %}
     </body>
 </html>
