@@ -2,11 +2,12 @@
 layout: default
 title: Blog
 ---
+{%- assign date_format = site.root_beer.date_format | default: "%b %-d, %Y" -%}
 
 {% for post in paginator.posts %}
   <h3><a href="{{ post.url }}" class="link">{{ post.title }}</a></h3>
   <p class="author">
-    <span class="date">{{ post.date | date_to_long_string }}</span>
+    <span class="date">{{ post.date | date: date_format }}</span>
   </p>
   <div class="content">
     {{ post.excerpt }}
