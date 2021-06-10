@@ -41,7 +41,8 @@ root_beer:
   latest_posts_limit: 5
   
   ### Analytics data
-  #analytics:
+  analytics:
+    honor_dnt: true # Honor 'Do Not Track' browser flag
   #  google: UA-...
   
   # generate social links in footer
