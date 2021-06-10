@@ -36,6 +36,8 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-seo-tag (2.7.1)
+      jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.1)
@@ -69,6 +71,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0.2)
   jekyll-paginate
+  jekyll-seo-tag
   kramdown-parser-gfm (~> 1.1.0)
   rake (~> 12.0)
   root-beer-jekyll!

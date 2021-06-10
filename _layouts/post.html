@@ -8,7 +8,10 @@ layout: default
         <h3 class="center-align card border">{{page.title}}</h3>
         </header>
         <figure class="post-cover">
-            {% if page.cover %}<img src="{{ page.cover | relative_url }}"> {% endif %}
+            {%- capture cover_image -%}
+            {% if page.image.first %}{{page.image.path}}{% else %}{{page.image}}{% endif %}
+            {%- endcapture -%}
+            {% if cover_image != empty %}<img src="{{ cover_image | relative_url }}"> {% endif %}
         </figure>
         
     </div>
