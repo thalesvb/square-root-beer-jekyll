@@ -13,9 +13,9 @@ layout: default
     <div class="row no-wrap no-space">
       <div class="col">
         {%- capture post_cover_image -%}
-        {% if post.image.first %}{{post.image.path}}{% else %}{{post.image}}{% endif %}
+        {% if post.image.first %}{{post.image.path }}{% else %}{{post.image}}{% endif %}
         {%- endcapture -%}
-        {% if post_cover_image != empty %}<img src="{{ post_cover_image | relative_url }}" class="responsive"> {% endif %}
+        {% if post_cover_image != empty %}<img src="{{ post_cover_image | prepend: site.cdn_url | relative_url }}" class="responsive"> {% endif %}
       </div>
       <div class="col">
         <div class="padding">

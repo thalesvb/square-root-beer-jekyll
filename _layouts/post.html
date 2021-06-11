@@ -11,7 +11,7 @@ layout: default
             {%- capture cover_image -%}
             {% if page.image.first %}{{page.image.path}}{% else %}{{page.image}}{% endif %}
             {%- endcapture -%}
-            {% if cover_image != empty %}<img src="{{ cover_image | relative_url }}"> {% endif %}
+            {% if cover_image != empty %}<img src="{{ cover_image | prepend: site.cdn_url | relative_url }}"> {% endif %}
         </figure>
         
     </div>
