@@ -49,6 +49,10 @@ layout: default
             {% endif %}
         </div>
 
+        {%- if page.series -%}
+            {%- include post_series.html -%}
+        {%- endif -%}
+
 </article>
 
 {% include share_post.html %}
