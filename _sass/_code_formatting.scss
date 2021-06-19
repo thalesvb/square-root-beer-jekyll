@@ -1,0 +1,19 @@
+pre.highlight {
+    white-space: pre-wrap;
+}
+
+// TODO: Discover how make it lines wrapped in an element like div, so CSS line count can be applied.
+/*
+pre.highlight span {
+    counter-increment: line;
+}
+
+pre.highlight span:before {
+    content: counter(line);
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888;
+}
+*/
