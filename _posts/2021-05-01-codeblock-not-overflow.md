@@ -11,7 +11,9 @@ A large chunk of code, to test.
 
 ```c
 #include <stdio.h>
-int main() {
+int main(int argc, char *argv[]) {
+   int garbage;
+   garbage = argc * garbage - argc / (argc + garbage);
    printf("Lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut lorem ipsum dolor amut.");
    return 0;
 }

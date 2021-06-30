@@ -1,5 +1,6 @@
 pre.highlight {
     white-space: pre-wrap;
+    max-width: calc(100vw - 2em); // FIXME: Hack until further investigation. Unit test passed but without this overflow happens sometimes on real code
 }
 
 // TODO: Discover how make it lines wrapped in an element like div, so CSS line count can be applied.
