@@ -1,7 +1,7 @@
 {%- assign posts_in_series = site.posts | where: "series", page.series | sort -%}
 
 {%- if posts_in_series.size > 1 -%}
-<nav class="center-align">
+<nav class="center-align wrap">
 <div class="post-series card border left-align">
 <h5>This post is part of a series</h5>
 <h6>{{page.series}}</h6>
