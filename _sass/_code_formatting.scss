@@ -1,5 +1,6 @@
 pre.highlight {
     white-space: pre-wrap;
+    overflow-wrap: anywhere; // FIXME: This should be break-word, but container ignore scroll area to calculate when to break.
     max-width: calc(100vw - 2em); // FIXME: Hack until further investigation. Unit test passed but without this overflow happens sometimes on real code
 }
 
