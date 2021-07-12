@@ -7,11 +7,11 @@ layout: default
         <header class="post-header">
         <h3 class="center-align card border">{{page.title}}</h3>
         </header>
-        <figure class="post-cover">
-            {%- capture cover_image -%}
-            {% if page.image.first %}{{page.image.path}}{% else %}{{page.image}}{% endif %}
-            {%- endcapture -%}
-            {% if cover_image != empty %}<img src="{{ cover_image | prepend: site.cdn_url | relative_url }}"> {% endif %}
+        {%- capture cover_image -%}
+        {% if page.image.first %}{{page.image.path}}{% else %}{{page.image}}{% endif %}
+        {%- endcapture -%}
+        <figure class="post-cover" style="background-image: url('{{ cover_image | prepend: site.cdn_url | relative_url }}');">
+
         </figure>
         
     </div>

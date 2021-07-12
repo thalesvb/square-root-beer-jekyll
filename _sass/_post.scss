@@ -10,10 +10,9 @@
     grid-template-rows: 1fr;
 }
 .post-header {
-    margin: 15vw auto;
+    margin: 2em 0 1em auto;
     z-index: 1;
     //position: absolute;
-    width: 100%;
     grid-area: 1 / 1 / 2 / 2;
 }
 
@@ -22,13 +21,15 @@
 }
 
 .post-cover {
-    margin: 0 -4vw -100px;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 figure.post-cover {
-    min-height: 400px;
-    max-height: 600px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 0 -50vw -2em -50vw;
 }
 
 .post-cover img {
