@@ -12,7 +12,7 @@
                 <div class="tooltip">Share on Linkedin</div>
             </a>
             <a class="button" aria-label="Share on Twitter"
-                    href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ page.url | absolute_url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+                    href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ page.url | absolute_url }}{% if site.twitter_username %}%20via%20&#64;{{ site.twitter_username }}{% endif %}&hashtags={{page.tags | join:","}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fab fa-twitter"></i>
                 <div class="tooltip">Share on Twitter</div>
