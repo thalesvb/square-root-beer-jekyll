@@ -1,5 +1,5 @@
 {%- assign social = site.root_beer.social_links -%}
-<ul class="social-media-list">
+<ul id="social-media-list" class="social-media-list">
 {%- if social.linkedin -%}
     <li>
         <a rel="me" class="button border circle small" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}">

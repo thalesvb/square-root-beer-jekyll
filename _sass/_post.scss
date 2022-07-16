@@ -10,7 +10,7 @@
     grid-template-rows: 1fr;
 }
 .post-header {
-    margin: 2em 0 1em auto;
+    margin: 2em auto 1em auto;
     z-index: 1;
     //position: absolute;
     grid-area: 1 / 1 / 2 / 2;
@@ -29,7 +29,7 @@ figure.post-cover {
     background-position: center;
     background-repeat: no-repeat;
 
-    margin: 0 -50vw -2em -50vw;
+    //margin: 0 -50vw -2em -50vw;
 }
 
 .post-cover img {
@@ -55,6 +55,12 @@ figure.post-cover {
 @media only screen and (max-width: 600px) {
     .post-header {
         top: 0px;
+    }
+}
+
+@media only print {
+    #share_post {
+        display: none;
     }
 }
 

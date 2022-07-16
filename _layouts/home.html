@@ -23,10 +23,10 @@ layout: default
           <div>{{ post.date | date: date_format }}</div>
           <div>{{ post.excerpt }}</div>
           <nav>
-            <a href="{{ post.url }}"><button class="border">Link</button></a>
+            <a href="{{ post.url }}"><button class="">Link</button></a>
             <div class="post-categories">
               {% for category in post.categories %}
-              <div class="chip">{{category}}</div>
+              <div class="chip small border round no-wave">{{category}}</div>
               {% endfor  %}
             </div>
           </nav>

@@ -1,13 +1,5 @@
-html, body {
-    height: 100%;
+@media only print {
+  #menu, #menu-small, #social-media-list {
+    display: none;
   }
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  body {
-    flex: 1 0 auto;
-  }
-  footer {
-    flex-shrink: 0;
-  }
+}

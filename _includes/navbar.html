@@ -1,4 +1,4 @@
-<div id="menu-id" class="menu medium-device large-device top">
+<nav id="menu" class="menu m l left">
     <a href="/" class="{% if page.url == '/' %}active{% endif %}">
         <i>home</i>
         <div>Home</div>
@@ -17,8 +17,12 @@
         <div>{{collection.label_pretty}}</div>
     </a>
     {% endfor %}
-</div>
-<div id="menu-bottom" class="menu bottom small-device">
+    <a id="light_mode">
+        <i>light_mode</i>
+        <div>Light/Dark</div>
+    </a>
+</nav>
+<nav id="menu-small" class="menu s bottom">
     <a href="/" class="{% if page.url == '/' %}active{% endif %}">
         <i>home</i>
         <div>Home</div>
@@ -37,4 +41,4 @@
         <div>{{collection.label_pretty}}</div>
     </a>
     {% endfor %}
-</div>
+</nav>

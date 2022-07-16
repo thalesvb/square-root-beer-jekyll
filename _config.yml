@@ -46,7 +46,11 @@ root_beer:
     honor_dnt: true # Honor 'Do Not Track' browser flag
   #  google: UA-...
   
-  # generate social links in footer
+  ### BeerCSS
+  beercss:
+    theme: "#2196f3"
+
+  ### Generate social links in footer
   social_links:
     twitter: jekyllrb
     github:  jekyll

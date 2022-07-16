@@ -15,6 +15,10 @@ footer.card > div {
     max-width: 992px;
 }
 
+.contact-list {
+    list-style-type: none;
+}
+
 .container {
     flex: 1 0 auto;
 }
@@ -37,6 +41,7 @@ footer.card > div {
     }
 }
 
+@import 'basic_html';
 @import 'beer_overwrites';
 @import 'antiheroic';
 @import 'post';
