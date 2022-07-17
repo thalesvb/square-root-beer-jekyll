@@ -1,6 +1,7 @@
 ---
 ---
-glbUtil = {
+'use strict';
+var glbUtil = {
     store: function() {
         window.name = JSON.stringify(glbUtil.state);
     },
@@ -20,19 +21,20 @@ function toggleLightMode () {
     glbUtil.store();
 }
 function works_done() {
+    document.getElementById("light_mode").onclick = toggleLightMode;
     var mainClasses = document.getElementById("main").classList;
     var theme = ui("theme", "{{ site.root_beer.beercss.theme }}");
     glbUtil.restore();
+    function applyStoredLightMode(lightMode) {
+        lightMode && ui("mode", lightMode);
+        mainClasses.add("active");
+    }
     if (!glbUtil.state.currentLightMode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         glbUtil.state.currentLightMode = "dark";
     }
-    if (glbUtil.state.currentLightMode) {
-        theme.then(function(){
-            ui("mode", glbUtil.state.currentLightMode);
-            mainClasses.add("active");
-        });
+    if (theme.then) {
+        theme.then(applyStoredLightMode.bind(null, glbUtil.state.currentLightMode));
     } else {
-        theme.then(function(){ mainClasses.add("active"); });
+        applyStoredLightMode(glbUtil.state.currentLightMode);
     }
-    document.getElementById("light_mode").onclick = toggleLightMode;
 }
