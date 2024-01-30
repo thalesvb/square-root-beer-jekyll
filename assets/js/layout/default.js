@@ -16,18 +16,38 @@ var glbUtil = {
     }
 }
 function toggleLightMode () {
-    glbUtil.state.currentLightMode = ui("mode") == "dark" ? "light" : "dark";
+    const lightState = ui("mode") == "dark" ? "light" : "dark";
+    glbUtil.state.currentLightMode = lightState;
     ui("mode", glbUtil.state.currentLightMode);
+    lightToggles(lightState);
     glbUtil.store();
 }
+
+function lightToggles(lightState) {
+    const toggles = [];
+    for (let lightToggle of ["light_mode", "light_mode_small"]) {
+        const lightToggleElem = document.getElementById(lightToggle);
+        const toggleIcon = lightToggleElem.getElementsByTagName("i")[0];
+        if (toggleIcon) {
+            toggleIcon.innerText = `${lightState}_mode`;
+        }
+        toggles.push(lightToggleElem);
+    }
+    return toggles;
+}
+
 function works_done() {
-    document.getElementById("light_mode").onclick = toggleLightMode;
+    glbUtil.restore();
     var mainClasses = document.getElementById("main").classList;
     var theme = ui("theme", "{{ site.root_beer.beercss.theme }}");
-    glbUtil.restore();
     function applyStoredLightMode(lightMode) {
         lightMode && ui("mode", lightMode);
         mainClasses.add("active");
+        const currentLightToggleIcon = glbUtil.state.currentLightMode === "dark" ? "dark_mode" : "light_mode";
+        const toggles = lightToggles(currentLightToggleIcon);
+        for (let lightToggle of toggles) {
+            lightToggle.onclick = toggleLightMode;
+        }
     }
     if (!glbUtil.state.currentLightMode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         glbUtil.state.currentLightMode = "dark";
