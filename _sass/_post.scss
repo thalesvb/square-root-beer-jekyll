@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    background-color: var(--secondary-container);
 }
 .post-header {
     margin: 2em auto 1em auto;
@@ -28,6 +29,7 @@ figure.post-cover {
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: opacity(0.5);
 
     //margin: 0 -50vw -2em -50vw;
 }
