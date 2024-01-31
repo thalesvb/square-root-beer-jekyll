@@ -50,6 +50,11 @@ root_beer:
   beercss:
     theme: "#2196f3"
 
+  
+  ### Search-related config
+  search:
+    page: /search/
+
   ### Generate social links in footer
   social_links:
     twitter: jekyllrb

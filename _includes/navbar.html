@@ -17,6 +17,13 @@
         <div>{{collection.label_pretty}}</div>
     </a>
     {% endfor %}
+    {% if site.root_beer.search.page %}
+    <a href="{{ site.root_beer.search.page | relative_path}}" class="{% if page.url contains site.root_beer.search.page %}active{% endif %}">
+        <i>search</i>
+        <div>Search</div>
+    </a>
+    {% endif %}
+    <span style="height:100%;"></span>
     <a id="light_mode">
         <i>light_mode</i>
         <div>Light/Dark</div>
@@ -41,6 +48,12 @@
         <div>{{collection.label_pretty}}</div>
     </a>
     {% endfor %}
+    {% if site.root_beer.search.page %}
+    <a href="{{ site.root_beer.search.page | relative_path}}" class="{% if page.url contains site.root_beer.search.page %}active{% endif %}">
+        <i>search</i>
+        <div>Search</div>
+    </a>
+    {% endif %}
     <a id="light_mode_small">
         <i>light_mode</i>
         <div>Light/Dark</div>
