@@ -25,6 +25,15 @@ layout: default
     {% endfor %}
   </div>
 
+  <div id="antiheroic_screenshots">
+
+     <div class="row scroll">
+      {% for screenshot in page.screenshots %}
+      <img class="small-width small-height" src="{{screenshot.image | prepend: site.cdn_url}}">
+      {% endfor %}
+    </div>
+  </div>
+
 </div>
 
 

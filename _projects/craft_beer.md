@@ -7,6 +7,21 @@ features:
     image: //via.placeholder.com/1000x600.png
   - title: There I failed it
     description: Show no more
+  - title: Another one bites
+    description: The dust
+  - title: Lorem
+    description: Ipsum
+screenshots:
+  - caption: Simulating
+    image: //via.placeholder.com/1000x600.png
+  - caption: Simulating
+    image: //via.placeholder.com/1000x600.png
+  - caption: Simulating
+    image: //via.placeholder.com/1000x600.png
+  - caption: Simulating
+    image: //via.placeholder.com/1000x600.png
+  - caption: Simulating
+    image: //via.placeholder.com/1000x600.png
 ---
 
 # First H1 section, The Antiheroic Banner
