@@ -11,6 +11,7 @@
     background-color: var(--secondary-container);
 }
 .post-header {
+    background-color: initial;
     margin: 2em auto 1em auto;
     z-index: 1;
     //position: absolute;
@@ -29,7 +30,7 @@ figure.post-cover {
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: opacity(0.5);
+    filter: opacity(0.3);
 
     //margin: 0 -50vw -2em -50vw;
 }

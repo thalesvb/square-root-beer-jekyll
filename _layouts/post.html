@@ -5,7 +5,7 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
     <div class="post-header-container">
         <header class="post-header">
-        <h3 class="center-align card border">{{page.title}}</h3>
+        <h3 class="center-align">{{page.title}}</h3>
         </header>
         {%- capture cover_image -%}
         {% if page.image.first %}{{page.image.path}}{% else %}{{page.image}}{% endif %}
