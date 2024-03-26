@@ -6,35 +6,32 @@ layout: default
 {%- assign date_format = site.root_beer.date_format | default: "%b %-d, %Y" -%}
 {%- assign latest_posts_limit = site.root_beer.latest_posts_limit | default: 5 -%}
 <h2 class="center-align">Latest posts</h2>
-<div class="row">
 {% for post in site.posts limit:latest_posts_limit %}
-<div class="col s12">
-  <div class="card no-padding">
-    <div class="row no-wrap no-space">
-      <div class="col">
+  <article class="no-padding">
+    <div class="grid no-space">
+      <div class="s6">
         {%- capture post_cover_image -%}
         {% if post.image.first %}{{post.image.path }}{% else %}{{post.image}}{% endif %}
         {%- endcapture -%}
         {% if post_cover_image != empty %}<img src="{{ post_cover_image | prepend: site.cdn_url | relative_url }}" class="responsive"> {% endif %}
       </div>
-      <div class="col">
+      <div class="s6">
         <div class="padding">
           <h5>{{ post.title | truncatewords: 25 }}</h5>
           <div>{{ post.date | date: date_format }}</div>
           <div>{{ post.excerpt }}</div>
+          <div class="post-categories">
+            {% for category in post.categories %}
+            <div class="chip small border round no-wave">{{category}}</div>
+            {% endfor  %}
+          </div>
           <nav>
             <a href="{{ post.url }}"><button class="">Link</button></a>
-            <div class="post-categories">
-              {% for category in post.categories %}
-              <div class="chip small border round no-wave">{{category}}</div>
-              {% endfor  %}
-            </div>
           </nav>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </article>
 {% endfor %}
-</div>
-<script>works_done();</script>
+
+<script type="module">works_done();</script>

@@ -1,10 +1,12 @@
 {%- assign posts_in_series = site.posts | where: "series", page.series | sort -%}
 
 {%- if posts_in_series.size > 1 -%}
-<nav class="center-align wrap">
-<div class="post-series card border left-align">
+
+<article class="post-series border">
 <h5>This post is part of a series</h5>
 <h6>{{page.series}}</h6>
+<nav class="vertical">
+
 {%- assign ps_counter = 0 -%}
 {%- for ps in posts_in_series -%}
 {%- assign ps_counter = ps_counter | plus:1 -%}
@@ -12,16 +14,19 @@
 {%- if page.id == ps.id-%}
   {%- assign ps_shown = true -%}
 {%- endif -%}
-<div class="row middle-align divider no-wrap {% if ps_shown %}card{% endif %}">
-  <div class="col min">
-    <div class="chip circle {% if ps_shown %}active{% endif %}">{{ps_counter}}</div>
-  </div>
+
+<div class="row {% if ps_shown %}border{% endif %}">
   <div class="col">
+    <div class="chip circle {% if ps_shown %}fill{% endif %}">{{ps_counter}}</div>
+  </div>
+  <div class="col max">
     <div><a href="{{ps.url}}" class="link wave">{{ps.title}}</a></div>
     <label>{{ps.description}}</label>
   </div>
 </div>
 {%- endfor -%}
-</div>
+
 </nav>
+</article>
+
 {%- endif -%}

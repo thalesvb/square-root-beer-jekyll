@@ -2,14 +2,16 @@
 layout: default
 ---
 
-<nav>
-    <form action="{{ site.root_beer.search.page | relative_url }}" method="get">
-        <div class="field prefix left-round fill">
+<div class="middle-align center-align">
+<nav class="no-space">
+    <form action="{{ site.root_beer.search.page | relative_url }}" method="get" class="max" style="display:inline-flex;">
+        <div class="max field left-round fill border">
             <input name="query"/>
-            <button type="submit" class="circle large no-margin right-round"><i class="front">search</i></button>
         </div>
+        <button type="submit" class="large right-round"><i class="front">search</i></button>
     </form>
 </nav>
+</div>
 
 <ul id="search-results">
 </ul>

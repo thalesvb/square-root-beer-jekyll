@@ -43,7 +43,7 @@ function works_done() {
     function applyStoredLightMode(lightMode) {
         lightMode && ui("mode", lightMode);
         mainClasses.add("active");
-        const currentLightToggleIcon = glbUtil.state.currentLightMode === "dark" ? "dark_mode" : "light_mode";
+        const currentLightToggleIcon = glbUtil.state.currentLightMode === "dark" ? "dark" : "light";
         const toggles = lightToggles(currentLightToggleIcon);
         for (let lightToggle of toggles) {
             lightToggle.onclick = toggleLightMode;
